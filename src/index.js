@@ -7,18 +7,10 @@ const createTelegrafLogger = require('./middlewares/logger');
 const bot = new Bot(config.token);
 
 // Подключение middleware
-// bot.use(createTelegrafLogger({
-//     logMessageContent: true,
-//     slowThresholdMs: 500
-// }));
+bot.use(createTelegrafLogger());
 
-// Глобальный перехват ошибок (на случай, если middleware не смог обработать)
-// bot.catch((err, ctx) => {
-//     console.error(`Global error caught for update ${ctx?.update?.update_id}`, err);
-// });
-
-// Подключение хендлеров
-// setupHandlers(bot);
+// Настройка обработчиков
+setupHandlers(bot);
 
 // Запуск
 bot.start();
