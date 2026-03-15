@@ -1,4 +1,3 @@
-
 class CommandRegistry {
     constructor() {
         this._list = [];
@@ -18,6 +17,6 @@ class CommandRegistry {
             description: cmd.description
         }));
     }
-};
+}
 
-module.exports = new CommandRegistry();
+export default new CommandRegistry();

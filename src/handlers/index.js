@@ -1,6 +1,6 @@
-const startHandler = require('./start');
-const helpHandler = require('./help');
-const commandRegistry = require('./registry');
+import startHandler from './start';
+import helpHandler from './help';
+import commandRegistry from './registry';
 
 function createCommandObject(trigger, handler, description) {
     return {
@@ -20,4 +20,4 @@ function setupHandlers(bot) {
     );
 }
 
-module.exports = { setupHandlers };
+export default setupHandlers;
